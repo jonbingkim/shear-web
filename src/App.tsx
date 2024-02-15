@@ -17,32 +17,25 @@ const theme = extendBaseTheme({
   },
 })
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-  },
-]);
 
 function App() {
-  
+
 
   return (
-    <>
-      <div>
+    <ChakraProvider theme={theme}>
+      <Flex width={"100vw"} height={"100vh"} alignItems={"start"} justifyContent={"center"} >
 
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-   
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+        <VStack spacing={0} align='center' w='60%' bg='gray.100' height={"100vh"}>
+          <Header />
+          <Title />
+          <Features />
+          <Demo />
+          <Team />
+          <Footer />
+        </VStack >
+      </Flex>
+
+    </ChakraProvider >
   )
 }
 
