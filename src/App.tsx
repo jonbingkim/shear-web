@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Footer from './footer'
+import Team from './team'
 import { Box, Text, Flex, Spacer, Stack, VStack, Grid, Center, Button, ChakraProvider, extendBaseTheme, theme as chakraTheme, } from '@chakra-ui/react'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from './Header.js';
@@ -23,22 +25,24 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
+    <>
+      <div>
 
-    <ChakraProvider theme={theme}>
-      <Flex width={"100vw"} height={"100vh"} alignItems={"start"} justifyContent={"center"} >
-
-        <VStack spacing={0} align='center' w='60%' bg='gray.100' height={"100vh"}>
-          <Header />
-          <Title />
-          <Features />
-          <Demo />
-        </VStack >
-      </Flex>
-
-    </ChakraProvider >
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+   
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
   )
 }
 
