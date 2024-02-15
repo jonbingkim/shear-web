@@ -5,6 +5,7 @@ import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 import { Link } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Image } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import githubimg from '../public/pngwing.com.png'
 import linkedinimg from '../public/thereallinkedin.png'
 
@@ -13,10 +14,13 @@ import linkedinimg from '../public/thereallinkedin.png'
 const Team = () => {
   return (
     <div>
-  <HStack spacing='50px'>
+    <Text fontSize='50px' color='tomato' align='center' fontWeight='bold'>
+ Team
+</Text>
+  <HStack spacing='50px' justify='center' align='center'>
     <Flex justify='center' textAlign='center' alignContent='center' >
-    <Card>
- <CardHeader>
+    <Card align='center'>
+ <CardHeader fontSize='40px' fontWeight='bold'>
   Albert Hu
  </CardHeader>
  <CardBody>
@@ -34,8 +38,8 @@ const Team = () => {
     </Flex>
 
     <Flex justify='center' textAlign='center' alignContent='center' >
-<Card>
- <CardHeader>
+    <Card align='center'>
+<CardHeader fontSize='40px' fontWeight='bold'>
   Ari Anguiano
  </CardHeader>
  <CardBody>
@@ -53,8 +57,8 @@ const Team = () => {
 </Flex>
 
 <Flex justify='center' textAlign='center' alignContent='center' >
-<Card>
- <CardHeader>
+<Card align='center'>
+<CardHeader fontSize='40px' fontWeight='bold'>
   Caleb Kao
  </CardHeader>
  <CardBody>
@@ -72,8 +76,8 @@ const Team = () => {
 </Flex>
 
 <Flex justify='center' textAlign='center' alignContent='center' >
-<Card>
- <CardHeader>
+<Card align='center'>
+<CardHeader fontSize='40px' fontWeight='bold'>
   Dinesh W
  </CardHeader>
  <CardBody>
@@ -92,8 +96,8 @@ const Team = () => {
 
 
 <Flex justify='center' textAlign='center' alignContent='center' >
-<Card>
- <CardHeader>
+<Card align='center'>
+<CardHeader fontSize='40px' fontWeight='bold'>
   Jonathan Kim
  </CardHeader>
  <CardBody>

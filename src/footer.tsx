@@ -4,7 +4,7 @@ import { Box } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <Box>
+    <Box textAlign='center' marginTop='30px'>
       © Shear 2023 | MIT Licensed
     </Box>
   )
