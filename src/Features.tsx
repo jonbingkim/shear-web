@@ -1,115 +1,65 @@
 import React from 'react';
-import {
-  Box,
-  Text,
-  Flex,
-  Spacer,
-  Stack,
-  VStack,
-  HStack,
-  Grid,
-  Center,
-  ChakraProvider,
-  extendBaseTheme,
-  theme as chakraTheme,
-} from '@chakra-ui/react';
+import { Box, SimpleGrid, Icon, Text, VStack, Heading, extendTheme,ChakraProvider} from '@chakra-ui/react';
+import { FiDatabase, FiActivity, FiDollarSign, FiShield } from 'react-icons/fi';
 
-function Features() {
+// Feature component
+const Feature = ({ icon, title, description }) => (
+  <VStack
+    spacing={4} 
+    align="center"
+    maxW="md" 
+  >
+    <Icon as={icon} boxSize={16} /> 
+    <Text fontWeight="semibold" fontSize="xl">{title}</Text> 
+    <Text textAlign="center" noOfLines={2} fontSize="lg">{description}</Text> 
+  </VStack>
+);
+
+// Features grid component
+const Features = () => {
+
+
+const theme = extendTheme({
+    fonts: {
+        heading: 'Inter, sans-serif',
+        body: 'Inter, sans-serif',
+    },
+    });
   return (
-    <Box
-      h="60%"
-      w="100%"
-      borderWidth="2px"
-      borderColor="red.200"
-      padding="20px"
-      overflow=""
-      bg="gray.200"
-      margin="0px"
-    >
-      <VStack display="flex" justifyContent={'center'} padding="20px">
-        <Box as="b" fontFamily="Lilita One" fontSize="80px" color="#4285F4">
-          Features
-        </Box>
-        <Box w="50%" as="b" fontSize="20px" color="#4285F4"></Box>
+    <ChakraProvider theme={theme}>
+    <Box p={12} h="80vh"> {/* Increased padding */}
+      <VStack spacing={8} align="center" mb={10}>
+        <Heading as="h2" fontSize="5xl">Features</Heading>
+        <Text textAlign="center" fontSize="xl" maxWidth="container.md" h="75px">
+          Here are the highlights of some features Shear offers.
+        </Text>
       </VStack>
-      <HStack
-        display="flex"
-        justifyContent="center"
-        spacing={10}
-        paddingTop="10px"
-        paddingBottom="20px"
-      >
-        <VStack alignItems="center">
-          <Box as="b" fontFamily="Lilita One" fontSize="36px" color="#4285F4">
-            Optimization
-          </Box>
-          <Box
-            as="b"
-            fontFamily="Lilita One"
-            fontSize="20px"
-            bg="blue.200"
-            padding="20px"
-            w="300px"
-            h="300px"
-            color="#4285F4"
-          >
-            <span style={{ fontSize: '18px', fontFamily: 'Palatino' }}>
-              Simply input the ARN of any Lambda function and your optimization
-              specifications, and Shear automatically finds the cheapest
-              or fastest memory configuration for that function.
-              Shear fine-tunes its results, offering detailed analysis.
-            </span>
-          </Box>
-        </VStack>
-
-        <VStack alignItems="center">
-          <Box as="b" fontFamily="Lilita One" fontSize="36px" color="#4285F4">
-            Security
-          </Box>
-          <Box
-            as="b"
-            fontFamily="Lilita One"
-            fontSize="20px"
-            bg="blue.200"
-            padding="20px"
-            w="300px"
-            h="300px"
-            color="#4285F4"
-          >
-            <span style={{ fontSize: '18px', fontFamily: 'Palatino' }}>
-              Shear allows you to optimize your functions without compromising.
-              No need for unsafe access keys or publicly deploying your
-              function. Your data is also encrypted in-flight via SSL,
-              guaranteeing the safety of your information.
-            </span>
-          </Box>
-        </VStack>
-
-        <VStack alignItems="center">
-          <Box as="b" fontFamily="Lilita One" fontSize="36px" color="#4285F4">
-            Deployment
-          </Box>
-          <Box
-            as="b"
-            fontFamily="Lilita One"
-            fontSize="20px"
-            bg="blue.200"
-            padding="20px"
-            w="300px"
-            h="300px"
-            color="#4285F4"
-          >
-            <span style={{ fontSize: '18px', fontFamily : 'Palatino'}}>
-              Shear offers sophisticated deployment options to suit your needs.
-              You can choose between EC2, Fargate, or local hosting according to
-              your preferences. AWS deployment is automated via CloudFormation
-              for your convenience.
-            </span>
-          </Box>
-        </VStack>
-      </HStack>
+      <SimpleGrid columns={[1, null, 2]} spacing={12}> 
+       <Feature
+          icon={FiShield}
+          title="Secure Deployment"
+          description="Deploy securely with a platform built on a security-first approach to protect your data."
+        />
+        <Feature
+          icon={FiActivity}
+          title="Actionable Graphs"
+          description="Gain actionable insights with our interactive and informative graphs, tailored to your data."
+        />
+        <Feature
+          icon={FiDollarSign}
+          title="Run Time Cost Analysis"
+          description="Control your budget with detailed analyses of runtime costs and actionable saving strategies."
+        />
+    
+        <Feature
+          icon={FiDatabase}
+          title="Persistent Storage"
+          description="Efficiently store and retrieve data with robust persistent storage solutions, optimized for high availability."
+        />
+      </SimpleGrid>
     </Box>
+    </ChakraProvider>
   );
-}
+};
 
 export default Features;
