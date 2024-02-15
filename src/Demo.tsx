@@ -6,7 +6,7 @@ function Demo() {
 
     return (
 
-        <Box h='50%' w='100%' borderWidth='2px' borderColor='red.200' padding='20px' overflow='hidden' bg='gray.200' margin='0px'>
+        <Box h='50%' w='100%'  padding='20px' overflow='hidden' margin='0px'>
             <HStack>
                 <Text as='b' fontSize='100px' color='#4285F4'>Demo</Text>
             </HStack>

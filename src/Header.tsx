@@ -1,30 +1,47 @@
-import React from "react";
-import { Box, Text, Grid, Flex, Spacer, Stack, HStack, GridItem, Center, ChakraProvider, extendBaseTheme, theme as chakraTheme, } from '@chakra-ui/react';
+import React from 'react';
+import {
+  Box,
+  Text,
+  Flex,
+  Link,
+  HStack,
+  ChakraProvider,
+  extendTheme,
+  Image,
+} from '@chakra-ui/react';
+import logo from './images/shearLogo.png';
+
+const theme = extendTheme({
+  // theme configuration
+});
 
 function Header() {
-
-
-    return (
-
-        <Box h='12%' w='100%' borderWidth='2px' borderColor='red.200' padding='20px' overflow='hidden' bg='gray.200' margin='0px'>
-            <HStack>
-                <Text as='b' fontSize='60px' color='#4285F4'>Logo</Text>
-                <Spacer />
-                <Grid templateColumns='repeat(5, 1fr)' gap={0} w='40%'>
-                    <GridItem fontSize='20px' fontFamily='Lilita One' h='10'  >Features</GridItem>
-                    <GridItem fontSize='20px' fontFamily='Lilita One' h='10'  >Docs</GridItem>
-                    <GridItem fontSize='20px' fontFamily='Lilita One' h='10'  >Linkedin</GridItem>
-                    <GridItem fontSize='20px' fontFamily='Lilita One' h='10'  >GitHub</GridItem>
-                    <GridItem fontSize='20px' fontFamily='Lilita One' h='10'  >Team</GridItem>
-                </Grid>
-            </HStack>
-
-        </Box>
-
-
-
-
-    )
+  return (
+    <ChakraProvider theme={theme}>
+      <Box w='100%' color='primaryText' py='9' px='6'>
+        <Flex justify='space-between' align='center' maxW='1200px' mx='auto'>
+          <Image src={logo} boxSize="80px" alt="Logo" /> 
+          <HStack spacing={10}>
+            <Link href='#features' fontSize='2xl'>
+              Features
+            </Link>
+            <Link href='#demo' fontSize='2xl'>
+              Demo
+            </Link>
+            <Link href='#team' fontSize='2xl'>
+              Team
+            </Link>
+            <Link href='https://github.com/oslabs-beta/shear' isExternal fontSize='2xl'>
+              GitHub
+            </Link>
+            <Link href='https://www.linkedin.com/company/shearlambda' isExternal fontSize='2xl'>
+              LinkedIn
+            </Link>
+          </HStack>
+        </Flex>
+      </Box>
+    </ChakraProvider>
+  );
 }
 
 export default Header;

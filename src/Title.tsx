@@ -1,25 +1,54 @@
 import React from "react";
-import { Box, Text, Flex, Spacer, Stack, VStack, HStack, Grid, Center, ChakraProvider, extendBaseTheme, theme as chakraTheme, } from '@chakra-ui/react';
+import { Box, Text, VStack, ChakraProvider, extendTheme,Button,Link } from '@chakra-ui/react';
 
 function Title() {
+  const theme = extendTheme({
+    fonts: {
+      heading: 'Inter, sans-serif',
+      body: 'Inter, sans-serif',
+    },
+  });
 
-
-    return (
-
-        <Box h='40%' w='100%' borderWidth='2px' borderColor='red.200' padding='20px' overflow='hidden' bg='gray.200' margin='0px'>
-
-            <VStack display='flex' justifyContent={'center'}>
-
-                <Box as='b' fontFamily='Lilita One' fontSize='100px' color='#4285F4'>Shear</Box>
-                <Box w='50%' as='b' fontSize='20px' color='#4285F4'
-                >A really fun application that revolutionizes everything this is just a giant wall of text to see how the spacing works with Chakra UI default settings</Box>
-            </VStack>
-
-        </Box>
-
-
-
-    )
+  return (
+    <ChakraProvider theme={theme}>
+      <Box h='80vh' w='100%' padding='40px' margin='0'>
+        <VStack
+          spacing="8" 
+          justify="center" 
+          align="center" 
+          height="full" 
+        >
+          <Text
+            as="b"
+            fontFamily="heading"
+            fontSize={["5xl", "6xl", "7xl"]}
+            fontWeight="extrabold"
+          >
+            SHEAR
+          </Text>
+          <Text
+            w={["80%", "70%", "50%"]}
+            fontFamily="body"
+            fontSize={["1xl", "2xl", "3xl"]}
+            fontWeight="normal"
+            color="gray.600"
+          >
+            Effortlessly enhance your AWS Lambda performance with automated power tuning.
+          </Text>
+          <Text
+            w={["80%", "70%", "50%"]}
+            fontFamily="body"
+            fontSize={["1xl", "2xl", "3xl"]}
+            fontWeight="normal"
+            color="gray.600"
+          >
+            Maximize efficiency, minimize costs.
+          </Text>
+          <Button size='lg' borderColor="black"><Link href="https://github.com/oslabs-beta/shear/tree/dev">Get Started</Link></Button>
+        </VStack>
+      </Box>
+    </ChakraProvider>
+  )
 }
 
 export default Title;
