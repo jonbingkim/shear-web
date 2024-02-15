@@ -19,6 +19,9 @@ import githubimg from '../public/pngwing.com.png';
 import linkedinimg from '../public/thereallinkedin.png';
 import ahu from './images/ahu.jpeg'
 import caleb from './images/caleb.jpg'
+import ari from './images/ari.jpg'
+import jon from './images/jon.png'
+
 
 
 const TeamMemberCard = ({
@@ -54,7 +57,7 @@ const TeamMemberCard = ({
         mb={4}
         mx="auto"
         borderColor="white"
-        borderWidth={2}
+        borderWidth={3}
       />
       <Heading fontSize={'xl'} fontFamily={'body'} fontWeight={500}>
         {name}
@@ -102,6 +105,7 @@ const Team = () => {
         <TeamMemberCard
         role="Software Engineer"
           name="Ari Anguiano"
+          profileImg={ari}
           githubLink="https://github.com/crispulum"
           linkedinLink="https://www.linkedin.com/in/ari-anguiano"
           githubImg={githubimg}
@@ -110,6 +114,7 @@ const Team = () => {
         <TeamMemberCard
         role="Software Engineer"
           name="Jonathan Kim"
+          profileImg={jon}
           githubLink="https://github.com/jonbingkim"
           linkedinLink="www.linkedin.com/in/jonbkim"
           githubImg={githubimg}
