@@ -8,7 +8,7 @@ import Demo from './Demo.js';
 import Team from './team.js';
 import Footer from './footer.js';
 import './style.css';
-import pic from "./images/pic.jpg"
+import pic from "./images/pic2.jpg"
 
 function App() {
   return (

@@ -21,6 +21,7 @@ import ahu from './images/ahu.jpeg'
 import caleb from './images/caleb.jpg'
 import ari from './images/ari.jpg'
 import jon from './images/jon.png'
+import din from './images/din.jpg'
 
 
 
@@ -83,7 +84,7 @@ const Team = () => {
   return (
     <Container maxW={'7xl'} py={12}>
       <Box textAlign={'center'} h='10vh' mb={12}>
-        <Heading fontSize={'5xl'} color={useColorModeValue('gray.800', 'white')} fontWeight={'bold'}>
+        <Heading fontSize={'5xl'} color={useColorModeValue('gray.800', 'white')} fontWeight={'bold'} fontFamily='Lilita One'>
           Team
         </Heading>
         <Text fontSize={'xl'} color={'grey.700'}>
@@ -134,6 +135,7 @@ const Team = () => {
           name="Dinesh Wijesekara"
           githubLink="https://github.com/Dwijesek"
           linkedinLink="https://www.linkedin.com/in/dinesh-wijesekara-a14b96251/"
+          profileImg={din}
           githubImg={githubimg}
           linkedinImg={linkedinimg}
         />

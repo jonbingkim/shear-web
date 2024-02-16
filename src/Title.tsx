@@ -20,7 +20,7 @@ function Title() {
         >
           <Text
             as="b"
-            fontFamily="heading"
+            fontFamily="Lilita One"
             fontSize={["5xl", "6xl", "7xl"]}
             fontWeight="extrabold"
           >

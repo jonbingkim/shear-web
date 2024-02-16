@@ -29,10 +29,8 @@ const theme = extendTheme({
     <ChakraProvider theme={theme}>
     <Box p={12} h="80vh"> {/* Increased padding */}
       <VStack spacing={8} align="center" mb={10}>
-        <Heading as="h2" fontSize="5xl">Features</Heading>
-        <Text textAlign="center" fontSize="xl" maxWidth="container.md" h="75px">
-          Here are the highlights of some features Shear offers.
-        </Text>
+        <Heading as="h2" fontSize="5xl" fontFamily='Lilita One'>Features</Heading>
+      
       </VStack>
       <SimpleGrid columns={[1, null, 2]} spacing={12}> 
        <Feature

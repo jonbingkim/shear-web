@@ -27,7 +27,7 @@ function Header() {
 
   return (
     <ChakraProvider theme={theme}>
-      <Box w='100%' color='primaryText' py='9' px='6'>
+      <Box w='100%' color='primaryText' py='9' px='6' fontFamily='Lilita One'>
         <Flex justify='space-between' align='center' maxW='1200px' mx='auto'>
           <Image src={logo} boxSize="80px" alt="Logo" /> 
           <HStack spacing={10}>
