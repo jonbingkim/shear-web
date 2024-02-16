@@ -1,22 +1,39 @@
-import React from "react";
-import { Box, Text, Flex, Spacer, Stack, HStack, Grid, Center, ChakraProvider, extendBaseTheme, theme as chakraTheme, } from '@chakra-ui/react';
+import React from 'react';
+import { Box, Heading, Text, Image, Container,Center } from '@chakra-ui/react';
+import demo from "./images/animation.gif"
 
-function Demo() {
 
-
-    return (
-
-        <Box h='50%' w='100%'  padding='20px' overflow='hidden' margin='0px'>
-            <HStack>
-                <Text as='b' fontSize='100px' color='#4285F4'>Demo</Text>
-            </HStack>
-
+const Demo = () => {
+  return (
+    <Center h="70vh"> 
+      <Box
+        w="85vw" 
+        maxW="10xl" 
+        borderWidth="1px"
+        borderRadius="lg"
+        overflow="hidden"
+        p={5}
+        boxShadow="2xl"
+        bg="white"
+        my={5}
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Heading as="h2" size="xl" textAlign="center" mb={4} color="black.500">
+          See Shear in Action
+        </Heading>
+        <Text fontSize="lg" color="gray.700" mb={6} textAlign="center">
+        Configure, execute, and optimize. Analyze the performance metrics for your AWS Lambda functions.
+        </Text>
+        <Box w="100%" h="auto" overflow="hidden"> 
+          <Image src={demo} alt="Demo GIF" objectFit="contain" w="100%" h="auto" />
         </Box>
-
-
-
-
-    )
-}
+      </Box>
+    </Center>
+  );
+};
 
 export default Demo;
+``
