@@ -15,8 +15,8 @@ import {
   Avatar,
 } from '@chakra-ui/react';
 // import ahuHeadshot from "../ahu.jpg"
-import githubimg from '../public/pngwing.com.png';
-import linkedinimg from '../public/thereallinkedin.png';
+import githubimg from '/pngwing.com.png';
+import linkedinimg from '/thereallinkedin.png';
 import ahu from './images/ahu.jpeg'
 import caleb from './images/caleb.jpg'
 import ari from './images/ari.jpg'
@@ -133,7 +133,7 @@ const Team = () => {
         role="Software Engineer"
           name="Dinesh Wijesekara"
           githubLink="https://github.com/Dwijesek"
-          linkedinLink="https://www.linkedin.com/in/hu-albert/"
+          linkedinLink="https://www.linkedin.com/in/dinesh-wijesekara-a14b96251/"
           githubImg={githubimg}
           linkedinImg={linkedinimg}
         />
