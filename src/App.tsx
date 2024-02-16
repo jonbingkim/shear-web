@@ -6,11 +6,26 @@ import Title from './Title.js';
 import Features from './Features.js';
 import Demo from './Demo.js';
 import Team from './team.js';
+import React, { useRef } from 'react';
 import Footer from './footer.js';
 import './style.css';
 import pic from "./images/pic2.jpg"
 
 function App() {
+
+  const featuresRef = useRef(null);
+  const demoRef = useRef(null);
+  const teamRef = useRef(null);
+
+  const scrollToRef = (ref) => ref.current.scrollIntoView({ behavior: 'smooth' });
+
+  const onSectionClick = (section) => {
+    if (section === 'features') scrollToRef(featuresRef);
+    else if (section === 'demo') scrollToRef(demoRef);
+    else if (section === 'team') scrollToRef(teamRef);
+  };
+
+
   return (
     <ChakraProvider>
       <Flex
@@ -25,11 +40,17 @@ function App() {
         bgPosition="center" 
       >
         <VStack spacing={0} align='center' w='100%' height="auto" overflow="hidden">
-          <Header />
+          <Header onSectionClick={onSectionClick}/>
           <Title />
-          <Features />
-          <Demo />
+          <div ref={featuresRef}>
+            <Features />
+          </div>
+          <div ref={demoRef}>
+          <Demo  />
+          </div>
+          <div ref={teamRef}>
           <Team />
+          </div>
           <Footer />
         </VStack>
       </Flex>
