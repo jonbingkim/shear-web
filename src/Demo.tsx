@@ -5,7 +5,7 @@ import demo from "./images/animation.gif"
 
 const Demo = () => {
   return (
-    <Center h="70vh"> 
+    <Center h="80vh"> 
       <Box
         w="85vw" 
         maxW="10xl" 

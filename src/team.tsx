@@ -86,7 +86,7 @@ const Team = () => {
         <Heading fontSize={'5xl'} color={useColorModeValue('gray.800', 'white')} fontWeight={'bold'}>
           Team
         </Heading>
-        <Text fontSize={'xl'} color={'gray.500'}>
+        <Text fontSize={'xl'} color={'grey.700'}>
           Meet our amazing team!
         </Text>
       </Box>
