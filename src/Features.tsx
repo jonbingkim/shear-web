@@ -54,7 +54,7 @@ const theme = extendTheme({
         <Feature
           icon={FiDatabase}
           title="Persistent Storage"
-          description="Efficiently store and retrieve data with robust persistent storage solutions, optimized for high availability."
+          description="Efficiently store and retrieve data with robust persistent storage solutions."
         />
       </SimpleGrid>
     </Box>

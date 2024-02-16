@@ -28,7 +28,7 @@ function App() {
           <Header />
           <Title />
           <Features />
-          {/* <Demo /> */}
+          <Demo />
           <Team />
           <Footer />
         </VStack>
